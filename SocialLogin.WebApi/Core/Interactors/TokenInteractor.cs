@@ -52,7 +52,7 @@ internal class TokenInteractor : ITokenInputPort
             default:
                 throw new InvalidScopeActionException();
         }
-        userEntity.Claims = new List<Claim> { new Claim("nonce", stateInfo.AppClientInfo.Nonce) };
+        userEntity.Claims = new List<Claim>(userEntity.Claims) { new Claim("nonce", stateInfo.AppClientInfo.Nonce) };
         await LoginOutputPort.HandleUserEntityAsync(userEntity);
     }
 }
