@@ -3,7 +3,7 @@ public class IDPClientInfo
 {
     public string ProviderId { get; set; }
     public string AuthorizeEndpoint { get; set; }
-    public string EndSessionUri { get; set; }
+    public string EndSessionEndpoint { get; set; }
     public string TokenEndpoint { get; set; }
     public string ClientId { get; set; }
     public string ClientSecret { get; set; }
