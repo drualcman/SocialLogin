@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "SocialLogin.Client.Blazor": {
+      "commandName": "Project",
+      "nativeDebugging": true,
+      "jsWebView2Debugging": true
+    }
+  }
+}

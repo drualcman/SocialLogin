@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SocialLogin.Client.Entities\SocialLogin.Client.Entities.csproj" />
+	  <ProjectReference Include="..\SocialLogin.Client.HttpHandlers\SocialLogin.Client.HttpHandlers.csproj" />
+	</ItemGroup>
+
+</Project>
