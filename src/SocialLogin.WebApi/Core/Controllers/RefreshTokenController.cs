@@ -7,9 +7,22 @@ internal class RefreshTokenController
             async (UserTokensDto userTokens, HttpContext context,
                    IRefreshTokenInputPort inputPort, IRefreshTokenOutputPort outputPort) =>
             {
-                await inputPort.RefreshTokenAsync(userTokens);
                 context.Response.Headers.TryAdd("Cache-Control", "no-store");
-                return Results.Ok(outputPort.UserTokens);
+                IResult result;
+                try
+                {
+                    await inputPort.RefreshTokenAsync(userTokens);
+                    result = Results.Ok(outputPort.UserTokens);
+                }
+                catch(RefreshTokenNotFoundException)
+                {   
+                    result = Results.Unauthorized();
+                }
+                catch(Exception ex)
+                {           
+                    result = Results.BadRequest(ex.Message);
+                }
+                return result;
             });
     }
 }

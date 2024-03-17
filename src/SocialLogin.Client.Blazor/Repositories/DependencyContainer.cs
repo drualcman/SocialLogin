@@ -3,7 +3,7 @@ public static partial class DependencyContainer
 {
     public static IServiceCollection AddMembershipRepository(this IServiceCollection services)
     {
-        services.AddScoped<ITokensRepository, TokensRepository>();
+        services.TryAddScoped<ITokensRepository, TokensRepository>();
         return services;
     }
 }

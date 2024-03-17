@@ -11,11 +11,13 @@ internal class JWTAuthenticationStateProvider : AuthenticationStateProvider,
         TokenRepository = tokenRepository;
     }
 
+    private bool IsValidToken(UserTokensDto storedTokens) => storedTokens is not null && !string.IsNullOrEmpty(storedTokens.AccessToken);
+
     public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
         ClaimsIdentity identity = new ClaimsIdentity();
         UserTokensDto storedTokens = await GetUserTokensAsync();
-        if(storedTokens is not null)
+        if(IsValidToken(storedTokens))
         {
             JwtSecurityToken token = GetToken(storedTokens.AccessToken);
             identity = new ClaimsIdentity(token.Claims, "Bearer");
@@ -29,7 +31,7 @@ internal class JWTAuthenticationStateProvider : AuthenticationStateProvider,
     public async Task<UserTokensDto> GetUserTokensAsync()
     {
         UserTokensDto storedTokens = await TokenRepository.GetTokensAsync();
-        if(storedTokens is not null)
+        if(IsValidToken(storedTokens))
         {
             JwtSecurityToken token = GetToken(storedTokens.AccessToken);
             if(token.ValidTo <= DateTime.UtcNow)

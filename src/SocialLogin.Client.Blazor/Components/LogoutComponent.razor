@@ -1,3 +1,4 @@
-﻿<button class="button is-info btn btn-primary" @onclick=Logout>
+﻿@inherits LogoutComponentBase
+<button type="button" title="@Localizer[MessageKeys.DisplayLogoutButtonMessage]" class="button is-light btn btn-primary" @onclick=Logout>
     @Localizer[MessageKeys.DisplayLogoutButtonMessage]
 </button>

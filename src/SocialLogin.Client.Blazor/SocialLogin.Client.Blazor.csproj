@@ -1,27 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>SocialLogin Client Blazor</Title>
+	  <Copyright>2024 Digital Door</Copyright>
+	  <Authors>Sergi Ortiz Gomez</Authors>
+	  <Description>Components for the Blazor Client or MVC Razor Pages.</Description>
+	  <Version>1.0.0</Version>
+	  <PackageLicenseFile>License.txt</PackageLicenseFile>
+	  <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
-
-
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
-
-
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
+		<PackageReference Include="SocialLogin.Client.HttpHandlers" Version="1.0.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.1" />
 	</ItemGroup>
-
-
 	<ItemGroup>
-	  <ProjectReference Include="..\SocialLogin.Client.Entities\SocialLogin.Client.Entities.csproj" />
-	  <ProjectReference Include="..\SocialLogin.Client.HttpHandlers\SocialLogin.Client.HttpHandlers.csproj" />
+		<None Include="License.txt" Pack="true" PackagePath="" />
+		<None Include="readme.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 </Project>

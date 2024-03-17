@@ -1,18 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
-	
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>SocialLogin WebApi</Title>
+	  <Copyright>2024 Digital Door</Copyright>
+	  <Authors>Sergi Ortiz Gomez</Authors>
+	  <Description>Object to add in a web api to use OAuth and OpenId.</Description>
+	  <Version>1.0.0</Version>
+	  <PackageLicenseFile>License.txt</PackageLicenseFile>
+	  <PackageReadmeFile>readme.md</PackageReadmeFile>
+  </PropertyGroup>	
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
-	</ItemGroup>
-	
+	</ItemGroup>	
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
 	</ItemGroup>
-	
-
+	<ItemGroup>
+		<None Include="License.txt" Pack="true" PackagePath="" />
+		<None Include="readme.md" Pack="true" PackagePath="" />
+	</ItemGroup>
 
 </Project>

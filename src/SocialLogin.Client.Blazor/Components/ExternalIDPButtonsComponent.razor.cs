@@ -15,6 +15,6 @@ public partial class ExternalIDPButtonsComponent
 
     async Task BuildUrl(string idp)
     {
-        await AuthorizeService.AuthorizeAsync(idp, ScopeAction, ReturnUri).ConfigureAwait(false);
+        await AuthorizeService.AuthorizeAsync(idp, ScopeAction, ReturnUri);
     }
 }

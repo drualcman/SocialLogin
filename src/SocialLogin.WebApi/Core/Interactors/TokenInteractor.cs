@@ -40,11 +40,6 @@ internal class TokenInteractor : ITokenInputPort
 
         switch(action)
         {
-            case "register":
-                await UserManagerService.ThrowIfUnableToRegisterExternalUserAsync(externalUserIdentity);
-                userEntity = await UserManagerService.ThrowIfUnableToGetUserByExternalCredentialsAsync(
-                    new ExternalUserCredentials(externalUserIdentity.LoginProvider, externalUserIdentity.ProviderUserId, stateInfo.Tokens));
-                break;
             case "login":
                 userEntity = await UserManagerService.ThrowIfUnableToGetUserByExternalCredentialsAsync(
                     new ExternalUserCredentials(externalUserIdentity.LoginProvider, externalUserIdentity.ProviderUserId, stateInfo.Tokens));

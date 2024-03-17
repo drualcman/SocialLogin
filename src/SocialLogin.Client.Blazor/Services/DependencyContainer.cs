@@ -6,7 +6,7 @@ public static partial class DependencyContainer
     {
         services.AddOptions<AppOptions>().Configure(appOptionsOptionsSetter);
         services.AddScoped<IAuthorizeService, AuthorizeService>();
-        services.AddScoped<IOAuthStateService, OAuthStateService>();
+        services.TryAddScoped<IOAuthStateService, OAuthStateService>();
         services.AddHttpClient<TokenService>()
             .AddExceptionDelegatingHandler();
         return services;

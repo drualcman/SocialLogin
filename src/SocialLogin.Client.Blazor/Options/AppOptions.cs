@@ -1,6 +1,4 @@
-﻿using SocialLogin.Client.Entities.ValueObjects;
-
-namespace SocialLogin.Client.Blazor.Options;
+﻿namespace SocialLogin.Client.Blazor.Options;
 public class AppOptions
 {
     public const string SectionKey = "appoptions";
