@@ -3,7 +3,7 @@ public static partial class DependencyContainer
 {
     public static IServiceCollection AddSocialLoginMessasgeLocalizer(this IServiceCollection services)
     {
-        services.TryAddSingleton<IMembershipMessageLocalizer, MembershipMessasgeLocalizer>();
+        services.TryAddSingleton<IMembershipMessageLocalizer, SocialLoginMessasgeLocalizer>();
         return services;
     }
 }

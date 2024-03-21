@@ -9,7 +9,7 @@ public static partial class DependencyContainer
         services.AddSocialLoginInteractors();
         services.AddSocialLoginPresenters();
         services.AddSocialLoginInternalServices(jwtOptionsSetter, appClientInfoOptionsSetter, idpClientInfoOptionsSetter);
-        services.AddOauthService();
+        services.AddSocialLoginOauthService();
         return services;
     }
 }

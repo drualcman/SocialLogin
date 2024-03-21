@@ -6,11 +6,11 @@ public static partial class DependencyContainer
         Action<AppOptions> appOptionsOptionsSetter)
     {
         services.AddAuthorizationCore();
-        services.AddMembershipGateways(userEndpointOptionsSetter);
-        services.AddMembershipServices(appOptionsOptionsSetter);
-        services.AddMembershipAuthenticationStateProvider();
-        services.AddMembershipRepository();
-        services.AddOauthService();
+        services.AddSocialLoginGateways(userEndpointOptionsSetter);
+        services.AddSocialLoginServices(appOptionsOptionsSetter);
+        services.AddSocialLoginAuthenticationStateProvider();
+        services.AddSocialLoginRepository();
+        services.AddSocialLoginOauthService();
         return services;
     }
 }

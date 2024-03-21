@@ -1,6 +1,6 @@
 ﻿namespace SocialLogin.WebApi.Shared.Localizaer;
 
-public class MembershipApiMessasgeLocalizer : IMembershipMessageLocalizer
+public class SocialLoginMembershipApiMessasgeLocalizer : IMembershipMessageLocalizer
 {
     readonly Dictionary<string, string> Messages_Es = new()
     {

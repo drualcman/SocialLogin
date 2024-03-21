@@ -1,6 +1,6 @@
 ﻿namespace SocialLogin.Client.Blazor.Shared.Localizaer;
 
-public class MembershipMessasgeLocalizer : IMembershipMessageLocalizer
+public class SocialLoginMessasgeLocalizer : IMembershipMessageLocalizer
 {
     readonly Dictionary<string, string> Messages_Es = new()
     {
