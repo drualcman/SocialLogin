@@ -4,17 +4,15 @@ public class SocialLoginMessasgeLocalizer : IMembershipMessageLocalizer
 {
     readonly Dictionary<string, string> Messages_Es = new()
     {
-        {MessageKeys.DisplayRegisterButtonMessage, "Register" },
         {MessageKeys.DisplayLoginButtonMessage, "Login" },
         {MessageKeys.DisplayLogoutButtonMessage, "Logout" },
 
-        {MessageKeys.RegisterUserExceptionMessage, "Register user exception." },
         {MessageKeys.LoginUserExceptionMessage, "Wrong credentials." },
         {MessageKeys.RefreshTokenCompromisedExceptionMessage, "Compromised token." },
         {MessageKeys.RefreshTokenExpiredExceptionMessage, "expired token." },
         {MessageKeys.RefreshTokenNotFoundExceptionMessage, "Token not found." },
 
-        {MessageKeys.MissingCallbackStateParameterExceptionMessage, "Invalid State."  },
+        {MessageKeys.MissingCallbackStateParameterExceptionMessage, "Missing Callback."  },
         {MessageKeys.UnableToGetIDPTokensExceptionMessage, "ISP exception."  },
         {MessageKeys.InvalidAuthorizationCodeExceptionMessage , "Invalid code."  },
         {MessageKeys.InvalidRedirectUriExceptionMessage , "Invalid redirect_uri."  },
