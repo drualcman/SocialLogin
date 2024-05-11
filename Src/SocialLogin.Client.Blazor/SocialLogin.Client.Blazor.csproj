@@ -7,7 +7,7 @@
 	  <Copyright>2024 Digital Door</Copyright>
 	  <Authors>Sergi Ortiz Gomez</Authors>
 	  <Description>Components for the Blazor Client or MVC Razor Pages.</Description>
-	  <Version>1.0.1</Version>
+	  <Version>1.0.2</Version>
 	  <PackageLicenseFile>License.txt</PackageLicenseFile>
 	  <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
