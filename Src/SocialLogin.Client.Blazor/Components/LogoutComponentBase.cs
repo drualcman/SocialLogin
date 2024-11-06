@@ -6,6 +6,7 @@ public class LogoutComponentBase : ComponentBase
     [Inject] IAuthenticationStateProvider AuthenticationStateProvider { get; set; }
     [Inject] protected IMembershipMessageLocalizer Localizer { get; set; }
     [Inject] NavigationManager NavigationManager { get; set; }
+    [Parameter] public EventCallback OnLogOut { get; set; }
 
     protected async void Logout()
     {
@@ -13,6 +14,9 @@ public class LogoutComponentBase : ComponentBase
         if(storedTokens is not null)
             await Gateway.LogoutAsync(storedTokens);
         await AuthenticationStateProvider.LogoutAsync();
-        NavigationManager.NavigateTo("", true);
+        if (OnLogOut.HasDelegate)
+            await OnLogOut.InvokeAsync();
+        else
+            NavigationManager.NavigateTo("", true);
     }
 }

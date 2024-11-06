@@ -7,12 +7,13 @@
 	  <Copyright>2024 Digital Door</Copyright>
 	  <Authors>Sergi Ortiz Gomez</Authors>
 	  <Description>Helper to use a handlers about the exceptions and tokens.</Description>
-	  <Version>1.0.0</Version>
+	  <Version>1.0.1</Version>
+	  <PackageReleaseNotes>Update nuget</PackageReleaseNotes>
 	  <PackageLicenseFile>License.txt</PackageLicenseFile>
 	  <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.10" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="License.txt" Pack="true" PackagePath="" />
